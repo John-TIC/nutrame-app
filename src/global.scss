@@ -35,3 +35,49 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+      // <!-- Prueba inicial insertando código de la web app -->
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --very-light-pink: #C7C7C7;
+  --text-input-field: #F7F7F7;
+  --hospital-green: #ACD9B2;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+  --vidh1: 190;
+  --vidw1: 380;
+}
+body {
+  margin: 0px;
+  font-family: 'Quicksand', sans-serif;
+  // font-family: cursive;
+}
+.grl-info {
+  width: 95%;
+  height: 100vh;
+  // background-color: var(--black);
+  bottom: 0px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  color: rgb(245, 39, 39);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.grl-info h3 {
+  color: cyan;
+}
+.init-button {
+  width: 92px;
+  height: 32px;
+  border: 2px solid rgb(210, 210, 136);
+  border-radius: 16px;
+  font-weight: bold;
+  background-color: var(--black);
+  color: rgb(226, 226, 168);
+  cursor: pointer;
+  margin-right: 6px;
+}
+      // <!-- FIN Prueba inicial insertando código de la web app -->

@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>carousel</ion-title>
   </ion-toolbar>
@@ -10,4 +10,18 @@
       <ion-title size="large">carousel</ion-title>
     </ion-toolbar>
   </ion-header>
+</ion-content> -->
+
+<ion-content>
+  <div class="rotonda">
+  <div class="billboard">
+      <div class="box">
+          <span *ngFor="let plato of platos, index as _i " style="--i: {{_i}}; --cantidadPlatos: {{cantidad_platos}};"><img src="{{plato.image}}" alt="{{plato.name}}"></span>
+      </div>
+  </div>
+  <div class="dishes-inf">
+    <button class="init-button" (click)="gotoPlatoInfo()">La Info</button>
+    <button class="init-button" (click)="gotoVideos()">Los Videos</button>
+ </div>
+</div>
 </ion-content>

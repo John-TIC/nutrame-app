@@ -11,14 +11,14 @@
     </ion-toolbar>
   </ion-header> -->
   <main class="main-container">
-    <!-- <div class="login-images"> -->
     <div class="imagen-reducida">
       <img src="../../../assets/images/Portada_sunset.jpg" alt="sunset-image">
       <img src="../../../assets/images/Avatar_ap_1.jpg" alt="avatar-image">
     </div>
     <div class="login-data">
       <p>*          La Profe Amelia          *</p>
-      <button class="init-button">Vamos ?</button>
+      <button class="init-button" [routerLink]="['/carousel']">Vamos ?</button>
+      <!-- <button class="init-button" (click)="gotoCarousel()">Vamos ?</button> -->
     </div>
   </main>
 </ion-content>

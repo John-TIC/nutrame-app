@@ -1,0 +1,213 @@
+.rotonda {
+  width: 100%;
+  height: 100vh;
+  // background-color: rgb(125, 173, 208);
+}
+/// Cartelera de Platos
+.box:hover {
+  animation-play-state: paused;
+}
+.box span:after
+{ // Controls the signal's color and velocity over the image
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-170px) skewX(30deg);
+  transition: 0.25s ease-in-out;
+}
+.box span:hover:after
+{ // Controls the ligth's effect over the image selected (distance, inclination)
+  transform: translateX(380px) skewX(370deg);
+}
+.box span:hover
+{ // Controls the box shadow color and effect over the image selected
+  box-shadow: 0 0 5px 1px rgba(19, 207, 217, 0.848);
+  filter: brightness(1);
+}
+
+// Smart Phones
+@media screen and (min-width: 315px) {
+  .billboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 78%;
+    // background-color: rgb(125, 173, 208); //rgb(186, 207, 211);
+  }
+
+  .box {
+    position: relative;
+    width: 145px;
+    height: 170px;
+    transform-style: preserve-3d;
+    animation: animate 45s linear infinite;
+  }
+  .box span:hover {
+    width: 170px;
+    height: 150px;
+  }
+
+  @keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+  }
+
+  .box span
+  { //Defines each image's characteristics
+    position: fixed; //absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * ( 360 / var(--cantidadPlatos) ) * 1deg)) translateZ(150px);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+  }
+  .box span img
+  { //Controls box border properties
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.35);
+    filter: sepia(30%) brightness(0.8);
+  }
+}
+
+// Tablets
+@media screen and (min-width: 768px) {
+  .billboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 78%;
+    // background-color: rgb(125, 173, 208); // rgb(186, 207, 211);
+  }
+
+  .box {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 105s linear infinite;
+  }
+  .box span:hover {
+    width: 275px;
+    height: 220px;
+  }
+
+  @keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+  }
+
+  .box span
+  { //Defines each image's characteristics
+    position: fixed; //absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * ( 360 / var(--cantidadPlatos) ) * 1deg)) translateZ(300px);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+  }
+  .box span img
+  { //Controls box border properties
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.35);
+    filter: sepia(30%) brightness(0.8);
+  }
+}
+
+/// Portátiles, Escritorio
+@media screen and (min-width: 1024px) {
+  .billboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 78%;
+    // background-color: rgb(125, 173, 208); // rgb(186, 207, 211);
+  }
+
+  .box {
+    position: relative;
+    width: 300px;
+    height: 255px;
+    transform-style: preserve-3d;
+    animation: animate 120s linear infinite;
+  }
+
+  .box span:hover {
+    width: 330px;
+    height: 280px;
+  }
+
+  @keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+  }
+
+  .box span
+  { //Defines each image's characteristics
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * ( 360 / var(--cantidadPlatos) ) * 1deg)) translateZ(400px);
+    -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, #0004);
+  }
+
+  .box span img
+  { //Controls box border properties
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.35);
+    filter: sepia(30%) brightness(0.8);
+  }
+
+}
+

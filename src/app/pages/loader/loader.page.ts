@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 })
 export class LoaderPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-  gotoInicio() {
-    // this.router.navigate(['/carousel']);
+  gotoCarousel() {
+    this.router.navigate(['/carousel']);
   }
 
 }

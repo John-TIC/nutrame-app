@@ -1,12 +1,27 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
+
+  <div class="main-page">
+    <ion-header>
+      <div class="title-app">NutriTips de la Profe</div>
+    </ion-header>
+
+    <ion-content [fullscreen]="true" class="ion-padding">
+      <ion-router-outlet></ion-router-outlet>
+    </ion-content>
+
+    <ion-footer>
+      <div class="credits">Job_Co - 2025 - Proyecto Académico / Derechos reservados</div>
+    </ion-footer>
+  </div>
+
+  <!-- <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Nutriapuntes</ion-list-header>
           <ion-note>App - Ensamblaje de Dietas</ion-note>
-          <!-- <ion-note>Apoyo Académico</ion-note>
-          <ion-note>laprofe&#64;job_co.com</ion-note> -->
+           <ion-note>Apoyo Académico</ion-note>
+          <ion-note>laprofe&#64;job_co.com</ion-note>
 
           @for (p of appPages; track p; let i = $index) {
             <ion-menu-toggle auto-hide="false">
@@ -31,5 +46,5 @@
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
+  </ion-split-pane> -->
 </ion-app>

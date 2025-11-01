@@ -117,3 +117,32 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+// ********** styles heritage **********
+.main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--black);
+}
+.title-app {
+  font-weight: bold;
+  font-size: xx-large;
+  color: var(--white);
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  top: 30px;
+  left: 0;
+}
+.credits {
+  font-size: var(--sm);
+  color: rgb(238, 190, 100);
+  width: 100%;
+  height: 6vh;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+}

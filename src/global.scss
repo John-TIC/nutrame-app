@@ -55,6 +55,9 @@ body {
   // font-family: cursive;
 }
 .grl-info {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   width: 95%;
   height: 100vh;
   // background-color: var(--black);
@@ -62,22 +65,48 @@ body {
   top: 5px;
   left: 5px;
   right: 5px;
-  color: rgb(245, 39, 39);
+  // color: rgb(245, 39, 39);
   padding-left: 10px;
   padding-right: 10px;
 }
 .grl-info h3 {
-  color: cyan;
+  color:blanchedalmond
+  // color: cyan;
 }
 .init-button {
-  width: 92px;
+  width: 120px;
   height: 32px;
-  border: 2px solid rgb(210, 210, 136);
+  border: 8px solid rgb(210, 210, 136);
   border-radius: 16px;
   font-weight: bold;
-  background-color: var(--black);
-  color: rgb(226, 226, 168);
+  background-color:  rgb(210, 210, 136); //rgb(226, 226, 168);
+  color: var(--black); //rgb(226, 226, 168);
+  cursor: pointer;
+  margin: 2px;
+}
+.play-button {
+  width: 92px;
+  height: 32px;
+  border: 6px solid rosybrown; //rgb(210, 210, 136);
+  border-radius: 16px;
+  background-color: rosybrown; //rgb(210, 210, 136);
+  // color: rgb(226, 226, 168);
+  color: black; //rgb(71, 17, 157); // rgb(238, 190, 100);
+  font-weight: bold;
   cursor: pointer;
   margin-right: 6px;
 }
+
+.mis-videos {
+  display: flex;
+  width: 100%;
+  border: 1px solid #000;
+}
+.login-data {
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--sm);
+}
+
       // <!-- FIN Prueba inicial insertando código de la web app -->

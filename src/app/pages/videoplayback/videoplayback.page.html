@@ -1,0 +1,43 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>videoplayback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">videoplayback</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
+<ion-content>
+  <div class="grl-info">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Ayudas de memoria en video...</h3>
+
+    <div class="mis-videos">
+      <youtube-player class="video-act"
+        videoId="mSC5hXZISvw"
+        suggestedQuality="highres"
+        [height]="180"
+        [width]="360"
+        [startSeconds]="1"
+        [endSeconds]="2"
+        muted="true">
+      </youtube-player>
+
+      <button class="init-button" (click)="returnVideos()">Retornar ?</button>
+      <button class="init-button" (click)="returnLogin()">Terminar ?</button>
+    </div>
+      <!-- [height]="190"
+        [width]="380" -->
+  </div>
+  <br>
+  <br>
+  <br>
+</ion-content>

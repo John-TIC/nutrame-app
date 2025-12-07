@@ -40,11 +40,11 @@ export class CarouselPage implements OnInit {
     this.cantidad_platos = this.platos.length
   }
 
-  gotoPlatoInfo() {
-    this.router.navigate(['/loader']);
+  gotoDocDishes() {
+    this.router.navigate(['/docdishes']);
   }
 
   gotoVideos() {
-    this.router.navigate(['/loader']);
+    this.router.navigate(['/videos']);
   }
 }

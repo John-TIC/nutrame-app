@@ -1,0 +1,144 @@
+<ion-content>
+  <div class="grl-info">
+    <div class="login-data">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <button class="info-button" (click)="showDialog1()">Contexto</button>
+      <dialog class="info-inside" id="contexto" [(open)]="open01">
+        <h3>Sensibilización / Guía</h3>
+        <p>
+          En éste sitio web usted podrá reforzar los conocimientos aprendidos. Utilícelo para recordar la importancia
+          de una buena alimentación en cuanto a cantidad y calidad se refiere.  ¡Aproveche esta ayuda digital!!!
+
+          Esta guía correspondiente al plato saludable le permitirá acceder a elegir una alimentación saludable, teniendo
+          en cuenta lo que se requiere en cuanto a macro y micronutrientes se refiere para estar saludable.
+        </p>
+        <button class="init-button" (click)="returnDialog()">Listo ?</button>
+      </dialog>
+
+      <br>
+      <br>
+      <h3>Grupos de Alimentos</h3>
+
+      <button class="info-button" (click)="showDialog2()">Grupo 1</button>
+      <dialog class="info-inside" id="grupo1" [(open)]="open02">
+        <h3>Cereales, tubérculos, raíces, plátanos y derivados</h3>
+        <p>
+          Estos alimentos proveen la mayor cantidad de energía que utiliza el organismo para realizar todas sus funciones,
+          tales como respirar, moverse, crecer y reparar tejidos. Además, los cereales integrales aportan fibra que ayuda
+          al buen funcionamiento del sistema digestivo.
+          Son una fuente importante de carbohidratos complejos o de lenta digestión.
+        </p>
+        <button class="init-button" (click)="returnDialog()">Listo ?</button>
+      </dialog>
+
+      <button class="info-button" (click)="showDialog3()">Grupo 2</button>
+      <dialog class="info-inside" id="grupo2" [(open)]="open03">
+        <h3>Frutas / Verduras</h3>
+        <p>
+          Son fuente disponible y muy variada de micronutrientes (vitaminas y minerales), las cuales contribuyen a la regulación
+          de diferentes procesos vitales como evitar el estreñimiento; gracias a su contenido de fibra dietaría, ayudan a reducir
+          los niveles de colesterol y disminuir la absorción de la glucosa, lo que previene enfermedades crónicas.
+          Contienen fitonutrientes que tienen una función antioxidante, es decir, rompen los radicales libres que son las sustancias
+          que generan daño en los órganos y están relacionadas con el proceso de envejecimiento y el cáncer.
+        </p>
+        <button class="init-button" (click)="returnDialog()">Listo ?</button>
+      </dialog>
+
+      <button class="info-button" (click)="showDialog4()">Grupo 3</button>
+      <dialog class="info-inside" id="grupo3" [(open)]="open04">
+        <h3>Leche y productos lácteos</h3>
+        <p>
+          Fuente importante de proteínas y calcio, su consumo favorece el crecimiento de huesos, dientes sanos y fuertes en niños.
+          En personas adultas previene la aparición de enfermedades como la osteoporosis, la cual consiste en un debilitamiento
+          de los huesos que nos expone a mayores riesgos de fracturas.
+        </p>
+        <button class="init-button" (click)="returnDialog()">Listo ?</button>
+      </dialog>
+
+      <button class="info-button" (click)="showDialog5()">Grupo 4</button>
+      <dialog class="info-inside" id="grupo4" [(open)]="open05">
+        <h3>Carnes, huevos, leguminosas/frutos secos y semillas</h3>
+        <p>
+          Fuente de proteína de alta calidad (alto valor biológico), favorece la salud de músculos, dientes y huesos. En niños
+          contribuye al crecimiento, en personas adultas sanas ayuda a mantener el funcionamiento del cuerpo. Las leguminosas
+          son granos secos que crecen en vaina como el frijol, las lentejas, las habas, ricos en fibra que contienen carbohidratos,
+          proteínas, minerales como hierro calcio y zinc, vitamina A y vitaminas del complejo B.
+        </p>
+        <button class="init-button" (click)="returnDialog()">Listo ?</button>
+      </dialog>
+
+      <button class="info-button" (click)="showDialog6()">Grupo 5</button>
+      <dialog class="info-inside" id="grupo5" [(open)]="open06">
+        <h3>Grasas</h3>
+        <p>
+          El consumo de las grasas insaturadas favorece la salud de corazón, venas y arterias, mientras que el consumo alto de las
+          grasas saturadas puede desarrollar hipertensión, infartos y otras alteraciones de la salud.
+
+          Las grasas insaturadas o polinsaturadas cumplen importantes funciones en nuestro cuerpo tales como permitir que se conserve
+          la temperatura corporal, proteger los órganos internos de golpes y lesiones, permitir la absorción de las vitaminas A, D, E
+          y K, proporcionar saciedad, además de absorber y retener sabores de los alimentos.
+        </p>
+        <button class="init-button" (click)="returnDialog()">Listo ?</button>
+      </dialog>
+
+      <button class="info-button" (click)="showDialog7()">Grupo 6</button>
+      <dialog class="info-inside" id="grupo6" [(open)]="open07">
+        <h3>Azúcares</h3>
+        <p>
+          Los carbohidratos simples son descompuestos rápidamente por el cuerpo para ser usados como energía y se encuentran en forma
+          natural en alimentos como las frutas, la leche y sus derivados.
+          También se encuentran disponibles en azúcares procesados y refinados como los dulces, el azúcar común, los almíbares y las
+          gaseosas los cuales son dañinos para la salud.
+        </p>
+        <button class="init-button" (click)="returnDialog()">Listo ?</button>
+      </dialog>
+
+      <br>
+      <br>
+      <h3>Elementos Adicionales</h3>
+
+      <button class="info-button" (click)="showDialog8()">Agua</button>
+      <dialog class="info-inside" id="grupo7" [(open)]="open08">
+        <h3>Agua</h3>
+        <p>
+          Permite el trasporte de nutrientes a las células. Colabora en el proceso digestivo, en la respiración y en la circulación
+          sanguínea. Interviene en la contracción de los músculos y da flexibilidad y elasticidad a los tejidos. Participa en el buen
+          funcionamiento del cerebro y de los nervios.
+
+          Cuando el cuerpo humano no tiene la cantidad de líquido necesaria, las células desaceleran sus actividades y generan menos
+          energía. Los calambres se presentan por el desequilibrio entre las proporciones de electrolitos y minerales, generando que
+          los músculos no funcionen correctamente. Adicionalmente una inadecuada hidratación genera en el organismo descensos de
+          rendimiento, dificultades de concentración, dolores de cabeza, irritabilidad y somnolencia, y aumentos de la temperatura
+          corporal y de la tasa respiratoria.
+        </p>
+        <button class="init-button" (click)="returnDialog()">Listo ?</button>
+      </dialog>
+
+      <button class="info-button" (click)="showDialog9()">Ejercício</button>
+      <dialog class="info-inside" id="grupo8" [(open)]="open09">
+        <h3>Ejercício</h3>
+        <p>
+          No olvidemos que la actividad física y la nutrición trabajan de manera conjunta para mejorar la salud y con ello la calidad
+          de vida, además que por sí solo, es un factor determinante para el mantenimiento de un adecuado estado de salud.
+      </p>
+        <button class="init-button" (click)="returnDialog()">Listo ?</button>
+      </dialog>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <button class="init-button" (click)="returnInicio()">Retornar ?</button>
+      <button class="init-button" (click)="returnLogin()">Terminar ?</button>
+    </div>
+  </div>
+</ion-content>

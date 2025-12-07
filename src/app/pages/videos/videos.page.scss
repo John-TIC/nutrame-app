@@ -1,0 +1,40 @@
+// .videos-plt {
+//   width: 95%;
+//   height: 100vh;
+//   // background-color: var(--black);
+//   bottom: 0px;
+//   top: 5px;
+//   left: 5px;
+//   right: 5px;
+//   color: rgb(245, 39, 39);
+//   padding-left: 10px;
+//   padding-right: 10px;
+// }
+
+.video-act {
+  height: 200;
+  width: 400;
+}
+
+@media (max-width:640px) {
+  .mis-videos {
+    flex-direction: column;
+  }
+}
+
+//  ***************************
+ion-item {
+  --padding-start: 10px;
+  --inner-padding-end: 5px;
+
+  height: 146px;
+  width: 346px;
+  padding-bottom: 3px;
+  background-color: rosybrown;
+}
+
+ion-thumbnail {
+  --size: 110px;
+  // width: 200;
+  // height: auto;
+}

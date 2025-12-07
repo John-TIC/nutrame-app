@@ -9,9 +9,15 @@ import { Router } from '@angular/router';
 })
 export class LoaderPage implements OnInit {
 
+  isLoading: boolean = true;
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3000); // Hide after 3 seconds
+
   }
   gotoCarousel() {
     this.router.navigate(['/carousel']);

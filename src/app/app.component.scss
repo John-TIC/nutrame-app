@@ -130,12 +130,13 @@ ion-item.selected {
 .title-app {
   font-weight: bold;
   font-size: xx-large;
-  color: var(--white);
+  color:  rgb(210, 210, 136);
   width: 100%;
-  height: 30px;
+  height: 50px;
   position: fixed;
+  // position:initial ;
   top: 30px;
-  left: 0;
+  // left: 0;
 }
 .credits {
   font-size: var(--sm);
@@ -144,5 +145,5 @@ ion-item.selected {
   height: 6vh;
   position: fixed;
   bottom: 0px;
-  left: 0;
+  // left: 0;
 }

@@ -14,14 +14,24 @@
 
 <ion-content>
   <div class="rotonda">
-  <div class="billboard">
-      <div class="box">
-          <span *ngFor="let plato of platos, index as _i " style="--i: {{_i}}; --cantidadPlatos: {{cantidad_platos}};"><img src="{{plato.image}}" alt="{{plato.name}}"></span>
-      </div>
+    <div class="billboard">
+        <div class="box">
+            <!-- <span *ngFor="let plato of platos, index as _i " style="--i: {{_i}}; --cantidadPlatos: {{cantidad_platos}};">
+              <img src="{{plato.image}}" alt="{{plato.name}}">
+            </span> -->
+            @for (plato of platos; track plato; let _i = $index ) {
+              <span style="--i: {{_i}}; --cantidadPlatos: {{cantidad_platos}};">
+                <img src="{{plato.image}}" alt="{{plato.name}}">
+              </span>
+            }
+            @empty {
+              <p>No hay elementos.</p>
+            }
+        </div>
+    </div>
+    <div class="login-data">
+      <button class="init-button" (click)="gotoDocDishes()">La Información</button>
+      <button class="init-button" (click)="gotoVideos()">Los Videos</button>
+    </div>
   </div>
-  <div class="dishes-inf">
-    <button class="init-button" (click)="gotoPlatoInfo()">La Info</button>
-    <button class="init-button" (click)="gotoVideos()">Los Videos</button>
- </div>
-</div>
 </ion-content>

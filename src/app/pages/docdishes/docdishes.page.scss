@@ -1,0 +1,39 @@
+.info-button {
+  width: 124px;
+  height: 44px;
+  // border: 2px solid rgb(210, 210, 136);
+  border-radius: 6px;
+  // margin-right: 8px;
+  // font-weight: bold;
+  font-size: var(--md);
+  background-color: rgb(187, 167, 243);
+  color: var(--black);
+  cursor: pointer;
+}
+.info-inside {
+  width: 65vw;
+  // height: 50vh;
+  border: 2px solid rgb(210, 210, 136);
+  border-radius: 20px;
+  background-color: rgb(136, 134, 139); //rgb(187, 167, 243);
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+.info-inside h3 {
+  color: var(--black);;
+}
+
+// Smart Phones
+@media screen and (min-width: 315px) {
+  .info-button {
+    width: 104px;
+    height: 40px;
+    margin: 1px;
+  }
+
+  .info-inside {
+    width: 80vw;
+  }
+}

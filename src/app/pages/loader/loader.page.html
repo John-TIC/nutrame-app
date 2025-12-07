@@ -17,7 +17,11 @@
     </div>
     <div class="login-data">
       <p>*          La Profe Amelia          *</p>
-      <button class="init-button" [routerLink]="['/carousel']">Vamos ?</button>
+      <button class="init-button" [routerLink]="['/carousel']">Comenzamos ?</button>
+      <br>
+      @if (isLoading) {
+        <ion-spinner name="circles"></ion-spinner>
+      }
       <!-- <button class="init-button" (click)="gotoCarousel()">Vamos ?</button> -->
     </div>
   </main>

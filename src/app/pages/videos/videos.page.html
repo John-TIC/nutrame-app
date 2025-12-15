@@ -11,42 +11,32 @@
     </ion-toolbar>
   </ion-header>
 </ion-content> -->
+<br>
+<br>
+<br>
+<ion-content  class="ion-padding" scroll-y="true">
+  <h3>Ayudas de memoria en Video...</h3>
 
-<ion-content>
-  <div class="grl-info">
-  <br>
-  <br>
-  <br>
-  <br>
-  <h3>Ayudas de memoria en video...</h3>
-
-  <div class="mis-videos">
-    <ion-list>
-      @for (video of videos; track video.id) {
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <ion-img [src]="video.thumbnailUrl"></ion-img>
-          </ion-thumbnail>
-          <ion-label>
-            <h2 style="font-size: 1.1em; font-weight: bold;">{{ video.title }}</h2>
-            <p style="font-size: 0.9em; color: #b0a4a4;">{{ video.description }}</p>
-            <ion-text color="primary">
-              <p style="font-size: 0.8em;">{{ video.views }} views</p>
-            </ion-text>
-            <button class="play-button" (click)="goToDetailsPage(video.videoUrl)">Play</button>
-          </ion-label>
-        </ion-item>
-      }
-    </ion-list>
-    <!-- [height]="190"
-      [width]="380" -->
-  </div>
-  <br>
-  <br>
+  <ion-list scroll-y="true">
+    @for (video of videos; track video.id) {
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img [src]="video.thumbnailUrl"></ion-img>
+        </ion-thumbnail>
+        <ion-label>
+          <h2 style="font-size: 1.1em; font-weight: bold;">{{ video.vtitle }}</h2>
+          <p style="font-size: 0.9em; color: #b0a4a4;">{{ video.description }}</p>
+          <ion-text color="primary">
+            <p style="font-size: 0.8em;">{{ video.views }} views</p>
+          </ion-text>
+          <button class="play-button" (click)="goToDetailsPage(video.videoUrl, video.vtitle)">Play</button>
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
   <br>
   <div class="login-data">
     <button class="init-button" (click)="returnCarousel()">Retornar ?</button>
     <button class="init-button" (click)="returnLogin()">Terminar ?</button>
   </div>
-</div>
 </ion-content>

@@ -47,4 +47,8 @@ export class CarouselPage implements OnInit {
   gotoVideos() {
     this.router.navigate(['/videos']);
   }
+
+  gotoPostCasts() {
+    this.router.navigate(['/podcast']);
+  }
 }

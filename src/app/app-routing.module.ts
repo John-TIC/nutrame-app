@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'docdishes', loadChildren: () => import('./pages/docdishes/docdishes.module').then( m => m.DocdishesPageModule) },
   { path: 'videos',    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule) },
   { path: 'videoplayback', loadChildren: () => import('./pages/videoplayback/videoplayback.module').then( m => m.VideoplaybackPageModule) },
+  { path: 'podcast',   loadChildren: () => import('./pages/podcast/podcast.module').then( m => m.PodcastPageModule) },
 ];
 
 @NgModule({

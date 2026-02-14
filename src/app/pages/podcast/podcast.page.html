@@ -1,0 +1,43 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>podcast</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">podcast</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+<br>
+<br>
+<br>
+<ion-content  class="ion-padding" scroll-y="true">
+  <h3>Ayudas de memoria en PodCast...</h3>
+
+  <ion-list scroll-y="true">
+    @for (podcast of podCasts; track podcast.id) {
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-img [src]="podcast.thumbnailUrl"></ion-img>
+        </ion-thumbnail>
+        <ion-label>
+          <h2 style="font-size: 1.1em; font-weight: bold;">{{ podcast.pctitle }}</h2>
+          <p style="font-size: 0.9em; color: #b0a4a4;">{{ podcast.description }}</p>
+          <ion-text color="primary">
+            <p style="font-size: 0.8em;">{{ podcast.views }} views</p>
+          </ion-text>
+          <button class="play-button" >Play</button>
+          <!-- <button class="play-button" (click)="goToDetailsPage(video.videoUrl, video.vtitle)">Play</button> -->
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
+  <br>
+  <div class="login-data">
+    <button class="init-button" (click)="returnCarousel()">Retornar ?</button>
+    <button class="init-button" (click)="returnLogin()">Terminar ?</button>
+  </div>
+</ion-content>

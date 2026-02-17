@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 
 import { Observable, of } from 'rxjs';
 import { Pc } from 'src/app/models/podcast.model';
@@ -13,16 +13,16 @@ import { Pc } from 'src/app/models/podcast.model';
 export class PodcastPage implements OnInit {
     private mockPcs: Pc[] = [
       {
-        id: '1', pctitle: 'Dietas Pediátricas', thumbnailUrl: '../assets/images/Dietas_pediatricas.jpg', pcUrl: 'j6VHqzKqQvs', description: 'Formato audio de apoyo.', views: 1000, likes: 100
+        id: '1', pctitle: 'Dietas Pediátricas', thumbnailUrl: '../assets/images/Dietas_pediatricas.jpg', pcUrl: 'j6VHqzKqQvs', description: 'Audio de apoyo.', views: 1000, likes: 100
       },
       {
-        id: '2', pctitle: 'Dietas x Consistencia', thumbnailUrl: '../assets/images/Dietas x Consistencia.jpg', pcUrl: 'iAOTBP69Z8Q', description: 'Formato audio de apoyo.', views: 800, likes: 80
+        id: '2', pctitle: 'Dietas x Consistencia', thumbnailUrl: '../assets/images/Dietas x Consistencia.jpg', pcUrl: 'iAOTBP69Z8Q', description: 'Audio de apoyo.', views: 800, likes: 80
       },
       {
-        id: '3', pctitle: 'Dietas x Composición de Nutrientes', thumbnailUrl: '../assets/images/Dietas_C.jpg', pcUrl: 'Z53IhpXnRf8', description: 'Formato audio de apoyo.', views: 1500, likes: 120
+        id: '3', pctitle: 'Dietas x Composición de Nutrientes', thumbnailUrl: '../assets/images/Dietas x Composición nutrientes.jpg', pcUrl: 'Z53IhpXnRf8', description: 'Audio de apoyo.', views: 1500, likes: 120
       },
       {
-        id: '4', pctitle: 'Dietas Hipoalergénicas', thumbnailUrl: '../assets/images/Dieta Hipoalergénica.jpg', pcUrl: 'o1XNeZfk23M', description: 'Formato audio de apoyo.', views: 1500, likes: 120
+        id: '4', pctitle: 'Dietas Hipoalergénicas', thumbnailUrl: '../assets/images/Dieta Hipoalergénica.jpg', pcUrl: 'o1XNeZfk23M', description: 'Audio de apoyo.', views: 1500, likes: 120
       },
     ];
 
@@ -49,6 +49,15 @@ export class PodcastPage implements OnInit {
     this.router.navigate(['/videoplayback']);
   }
 
+  goToDetailsPage(pcId: string, pcT: string) {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        special: JSON.stringify(pcId),
+        specialA: JSON.stringify(pcT)
+      }
+    };
+    this.router.navigate(['/pcplayback'], navigationExtras);
+  }
 
   getPc(): Observable<Pc[]> {
       return of(this.mockPcs);

@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'videos',    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule) },
   { path: 'videoplayback', loadChildren: () => import('./pages/videoplayback/videoplayback.module').then( m => m.VideoplaybackPageModule) },
   { path: 'podcast',   loadChildren: () => import('./pages/podcast/podcast.module').then( m => m.PodcastPageModule) },
+  { path: 'pcplayback',loadChildren: () => import('./pages/pcplayback/pcplayback.module').then( m => m.PcplaybackPageModule) },
 ];
 
 @NgModule({

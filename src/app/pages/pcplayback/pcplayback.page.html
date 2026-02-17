@@ -1,0 +1,49 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>pcplayback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">pcplayback</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
+<ion-content>
+  <div class="grl-info">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>PodCast ==> {{pcT}}  </h3>
+    <br>
+
+    <div class="mis-videos">
+      <youtube-player class="video-act"
+        videoId={{pcId}}
+        suggestedQuality="highres"
+        [height]="180"
+        [width]="360"
+        [startSeconds]="1"
+        [endSeconds]="2"
+        muted="true">
+      </youtube-player>
+      <br>
+      <br>
+
+      <div class="login-data">
+        <button class="init-button" (click)="returnVideos()">Retornar ?</button>
+        <button class="init-button" (click)="returnLogin()">Terminar ?</button>
+      </div>
+    </div>
+      <!-- [height]="190"
+        [width]="380" -->
+  </div>
+  <br>
+  <br>
+  <br>
+</ion-content>
+
